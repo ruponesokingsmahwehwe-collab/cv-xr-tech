@@ -3,66 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV_XR Tech | Phones, Laptops & Gaming</title>
-  <meta name="description" content="CV_XR Tech — phones, laptops, gaming gear and cameras. China to Zimbabwe sourcing and delivery.">
+  <title>KINGS TECH | Global Technology</title>
+  <meta name="description" content="KINGS TECH — premium technology sourced from China and shipped worldwide.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header">
-  <a class="logo" href="#">CV_XR <span>TECH</span></a>
-  <nav>
-    <a href="#products">Products</a>
-    <a href="#how">How It Works</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="crown">♛</span><span>KINGS <b>TECH</b></span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#shipping">Shipping</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="chat-open" id="chatOpen">💬 Customer Assistant</button>
+  </header>
 
-<section class="hero">
-  <div>
-    <p class="eyebrow">CHINA → ZIMBABWE</p>
-    <h1>Tech you want.<br><span>Delivered simply.</span></h1>
-    <p class="hero-text">Shop phones, laptops, gaming gear and cameras through CV_XR Tech.</p>
-    <a class="button" href="#products">Shop products</a>
-  </div>
-</section>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">CHINA → WORLDWIDE</p>
+        <div class="crest">♛</div>
+        <p class="royal">QUALITY • TRUST • GLOBAL</p>
+        <h1>THE BEST TECH<br><span>FROM CHINA</span></h1>
+        <p class="lead">Phones, laptops, gaming, cameras, audio, accessories and more — delivered to customers around the world.</p>
+        <div class="actions">
+          <a class="btn gold" href="#shop">Shop Now</a>
+          <button class="btn dark" id="heroChat">Ask KINGS TECH</button>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="gold-orb"></div>
+        <div class="tech-card">KINGS<br><strong>TECH</strong><small>GLOBAL</small></div>
+      </div>
+    </section>
 
-<section id="products" class="section">
-  <div class="section-head">
-    <div>
-      <p class="eyebrow">OUR CATALOGUE</p>
-      <h2>Popular products</h2>
+    <section class="trust">
+      <div><b>🌍 Worldwide</b><small>Global delivery options</small></div>
+      <div><b>🛡️ Trusted</b><small>Quality-focused sourcing</small></div>
+      <div><b>📦 Order Support</b><small>Automatic customer handling</small></div>
+      <div><b>👑 KINGS TECH</b><small>Premium technology</small></div>
+    </section>
+
+    <section id="categories" class="section">
+      <div class="section-title"><p class="eyebrow">EXPLORE</p><h2>SHOP BY CATEGORY</h2></div>
+      <div class="categories">
+        <button class="category" data-category="Phones">📱<b>Phones</b><span>iPhone • Samsung • More</span></button>
+        <button class="category" data-category="Laptops">💻<b>Laptops</b><span>Work • Study • Business</span></button>
+        <button class="category" data-category="Gaming">🎮<b>Gaming</b><span>Consoles • Gear</span></button>
+        <button class="category" data-category="Cameras">📷<b>Cameras</b><span>Photo • Video</span></button>
+        <button class="category" data-category="Accessories">🎧<b>Accessories</b><span>Audio • Chargers • More</span></button>
+        <button class="category" data-category="Smart Devices">⌚<b>Smart Devices</b><span>Wearables • Tech</span></button>
+      </div>
+    </section>
+
+    <section id="shop" class="section products-section">
+      <div class="section-title"><p class="eyebrow">KINGS COLLECTION</p><h2>FEATURED PRODUCTS</h2></div>
+      <div class="products" id="products"></div>
+      <p class="note">Prices and stock should be connected to the KINGS TECH product database before accepting live orders.</p>
+    </section>
+
+    <section id="shipping" class="shipping section">
+      <div>
+        <p class="eyebrow">GLOBAL DELIVERY</p>
+        <h2>WORLDWIDE SHIPPING<br><span>FROM CHINA</span></h2>
+        <p>Zimbabwe • South Africa • Zambia • Botswana • Malawi • Mozambique • Namibia • Tanzania • Kenya • Uganda • Ghana • Nigeria • UK • USA • UAE • Europe & more.</p>
+      </div>
+      <div class="shipping-card">
+        <h3>🚚 SHIPPING</h3>
+        <p>Final shipping is calculated from destination, product weight, dimensions and courier.</p>
+        <button class="btn gold" id="shippingChat">Ask about shipping</button>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-title"><p class="eyebrow">NEED HELP?</p><h2>WE'RE HERE FOR YOU</h2></div>
+      <div class="contact-grid">
+        <div><b>🤖 Automatic Assistant</b><p>Get instant answers while our team is busy.</p><button class="btn gold" id="contactChat">Open Assistant</button></div>
+        <div><b>👤 Human Support</b><p>Complex questions can be sent to the KINGS TECH team.</p></div>
+        <div><b>📦 Order Requests</b><p>Customers can submit product, destination and quantity details.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="crown">♛</span>KINGS <b>TECH</b></div>
+    <p>TECH FOR A BETTER TOMORROW • CHINA → WORLDWIDE</p>
+    <small>© 2026 KINGS TECH. All rights reserved.</small>
+  </footer>
+
+  <!-- Automatic customer handling prototype -->
+  <div class="chat-overlay" id="chatOverlay">
+    <div class="chat">
+      <div class="chat-head"><div><b>👑 KINGS TECH Assistant</b><small>Automatic customer support</small></div><button id="chatClose">×</button></div>
+      <div class="messages" id="messages">
+        <div class="msg bot">Welcome to KINGS TECH 👑<br>I'm your automatic customer assistant. What can I help you with?</div>
+      </div>
+      <div class="quick">
+        <button data-intent="products">📱 Products</button>
+        <button data-intent="shipping">🌍 Shipping</button>
+        <button data-intent="order">🛒 Place an order</button>
+        <button data-intent="human">👤 Human support</button>
+      </div>
+      <form id="chatForm"><input id="chatInput" placeholder="Type your question..." autocomplete="off"><button>Send</button></form>
     </div>
-    <input id="search" type="search" placeholder="Search products...">
   </div>
-  <div id="product-grid" class="grid"></div>
-</section>
 
-<section id="how" class="section dark">
-  <p class="eyebrow">HOW IT WORKS</p>
-  <h2>Order in 3 steps</h2>
-  <div class="steps">
-    <div><b>01</b><h3>Choose</h3><p>Select the device you want.</p></div>
-    <div><b>02</b><h3>Confirm</h3><p>Contact CV_XR Tech to confirm stock, condition and delivery cost.</p></div>
-    <div><b>03</b><h3>Receive</h3><p>We arrange delivery to your destination.</p></div>
-  </div>
-</section>
-
-<section id="contact" class="contact section">
-  <p class="eyebrow">GET IN TOUCH</p>
-  <h2>Ready to order?</h2>
-  <p>Send us the product name and your destination. We'll confirm the current price and shipping.</p>
-  <div class="contact-actions">
-    <a class="button" href="https://wa.me/" target="_blank">WhatsApp</a>
-    <a class="button outline" href="mailto:orders@cvxrtech.com">Email</a>
-  </div>
-</section>
-
-<footer>
-  <strong>CV_XR Tech</strong>
-  <span>Phones • Laptops • Gaming • Cameras</span>
-  <small>Prices and availability can change. Confirm before payment.</small>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
