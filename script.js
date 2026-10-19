@@ -1,57 +1,30 @@
 const products=[
-  {name:"Premium Smartphone",cat:"Phones",icon:"📱",desc:"iPhone, Samsung and other models"},
-  {name:"Business Laptop",cat:"Laptops",icon:"💻",desc:"Study, work and professional laptops"},
-  {name:"Gaming Setup",cat:"Gaming",icon:"🎮",desc:"Consoles, controllers and gaming gear"},
-  {name:"Camera & Video",cat:"Cameras",icon:"📷",desc:"Photography and video equipment"},
-  {name:"Audio Accessories",cat:"Accessories",icon:"🎧",desc:"Headphones, speakers and more"},
-  {name:"Smart Device",cat:"Smart Devices",icon:"⌚",desc:"Wearables and connected technology"}
+["iPhone 15 Pro","120GB | Unlocked","$620","https://images.unsplash.com/photo-1592286927505-2fd5c6f6f4c2?auto=format&fit=crop&w=600&q=85"],
+["Galaxy S24 Ultra","256GB | Unlocked","$580","https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=85"],
+["PlayStation 5","Disc Edition","$650","https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=85"],
+["MacBook Air M2","8GB | 256GB","$850","https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=85"],
+["Sony A6400","With 16–50mm Lens","$720","https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=85"],
+["JBL Tune 760NC","Wireless Headphones","$120","https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=85"]
 ];
-
-const productBox=document.getElementById("products");
-function renderProducts(filter=""){
-  productBox.innerHTML=products.filter(p=>!filter||p.cat===filter).map(p=>`
-    <article class="product">
-      <div class="product-img">${p.icon}</div>
-      <h3>${p.name}</h3>
-      <p>${p.desc}</p>
-      <button class="btn dark" onclick="openChatWith('I want information about ${p.name}.')">Ask about product</button>
-    </article>`).join("");
+const grid=document.getElementById("productGrid");
+let cart=0;
+function render(list=products){
+ grid.innerHTML=list.map((p,i)=>`<article class="product"><img src="${p[3]}" alt="${p[0]}"><h3>${p[0]}</h3><p>${p[1]}</p><div class="price">${p[2]}</div><button class="add" data-i="${i}">Add to Cart</button></article>`).join("");
+ document.querySelectorAll(".add").forEach(b=>b.onclick=()=>{cart++;document.getElementById("cartCount").textContent=cart;});
 }
-renderProducts();
-
-const overlay=document.getElementById("chatOverlay");
-const messages=document.getElementById("messages");
-const input=document.getElementById("chatInput");
-function openChat(){overlay.classList.add("show");input.focus()}
-function closeChat(){overlay.classList.remove("show")}
-function addMsg(text,type="bot"){const d=document.createElement("div");d.className=`msg ${type}`;d.innerHTML=text;messages.appendChild(d);messages.scrollTop=messages.scrollHeight}
-function openChatWith(text){openChat();input.value=text;sendMessage()}
-function botReply(text){
-  const q=text.toLowerCase();
-  if(q.includes("shipping")||q.includes("delivery")||q.includes("country")){
-    return "🌍 KINGS TECH offers worldwide shipping. We commonly serve Zimbabwe, South Africa, Zambia, Botswana, Malawi, Mozambique, Namibia, Tanzania, Kenya, Uganda, Ghana, Nigeria, the UK, USA, UAE, Europe and more. Final shipping depends on destination, weight, dimensions and courier.";
-  }
-  if(q.includes("price")||q.includes("cost")||q.includes("phone")||q.includes("iphone")||q.includes("samsung")){
-    return "📱 We supply phones and other technology. For an exact current price and stock check, please choose a product or tell me the exact model. Live prices will be connected to the KINGS TECH product database.";
-  }
-  if(q.includes("order")||q.includes("buy")){
-    return "🛒 I can start an order request. Please send: <b>product/model, quantity, destination country and your name</b>. A KINGS TECH team member can then confirm availability, final price and shipping.";
-  }
-  if(q.includes("human")||q.includes("person")||q.includes("agent")||q.includes("staff")){
-    return "👤 No problem. I'll mark this for human support. Please leave your name, contact method and a short description of what you need.";
-  }
-  return "👑 I can help with products, shipping, order requests and customer support. Try asking: <b>“How much is an iPhone 15?”</b>, <b>“Do you ship to Zimbabwe?”</b> or <b>“I want to place an order.”</b>";
+render();
+document.getElementById("search").addEventListener("input",e=>{const q=e.target.value.toLowerCase();render(products.filter(p=>p.join(" ").toLowerCase().includes(q)))});
+const chat=document.getElementById("chat");
+document.getElementById("openChat").onclick=()=>chat.classList.add("open");
+document.getElementById("closeChat").onclick=()=>chat.classList.remove("open");
+function reply(q){
+ const body=document.getElementById("chatBody");
+ body.innerHTML+=`<p><b>You:</b> ${q}</p>`;
+ let a="I can help with products, shipping and order requests. For live stock and final shipping quotes, please contact KINGS TECH.";
+ if(/shipping|delivery/i.test(q)) a="Estimated shipping starts around $20 for accessories, $25 for phones/tablets, $35 for laptops/cameras, and $40 for gaming consoles. Final quotes depend on destination and package.";
+ if(/product|have|sell/i.test(q)) a="We offer phones, laptops, gaming, cameras, audio, accessories, smart devices, monitors, computer accessories and car electronics.";
+ if(/order/i.test(q)) a="Tell us the product, quantity and destination. KINGS TECH can then prepare an order request.";
+ body.innerHTML+=`<p><b>KINGS TECH:</b> ${a}</p>`;body.scrollTop=body.scrollHeight;
 }
-function sendMessage(){
-  const text=input.value.trim(); if(!text)return;
-  addMsg(text,"user"); input.value="";
-  setTimeout(()=>addMsg(botReply(text)),350);
-}
-document.getElementById("chatOpen").onclick=openChat;
-document.getElementById("heroChat").onclick=openChat;
-document.getElementById("shippingChat").onclick=()=>openChatWith("I want to ask about shipping.");
-document.getElementById("contactChat").onclick=openChat;
-document.getElementById("chatClose").onclick=closeChat;
-document.getElementById("chatForm").addEventListener("submit",e=>{e.preventDefault();sendMessage()});
-document.querySelectorAll(".quick button").forEach(b=>b.onclick=()=>openChatWith(b.dataset.intent));
-document.querySelectorAll(".category").forEach(b=>b.onclick=()=>{renderProducts(b.dataset.category);document.getElementById("shop").scrollIntoView({behavior:"smooth"})});
+document.querySelectorAll(".quick button").forEach(b=>b.onclick=()=>reply(b.dataset.q));
+document.getElementById("chatForm").addEventListener("submit",e=>{e.preventDefault();const i=document.getElementById("chatInput");if(i.value.trim()){reply(i.value.trim());i.value=""}});
