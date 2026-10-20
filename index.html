@@ -3,112 +3,176 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KINGS TECH | Premium Technology Worldwide</title>
-<meta name="description" content="KINGS TECH — premium technology from China, shipped worldwide. Phones, laptops, gaming, cameras, audio, accessories and car electronics.">
+<title>KINGS TECH | The Best Tech From China to Zimbabwe</title>
+<meta name="description" content="KINGS TECH — phones, laptops, gaming, cameras, audio, accessories, smart devices, monitors, computer accessories and car electronics. China to Zimbabwe, Zambia and South Africa.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site-header">
-  <div class="brand">
-    <div class="brand-mark" aria-label="KINGS TECH crown logo"><img src="logo.svg" alt="KINGS TECH crown logo"></div>
-    <div>
-      <div class="brand-name">KINGS <span>TECH</span></div>
-      <div class="tagline">QUALITY • TRUST • GLOBAL</div>
-    </div>
-  </div>
-  <nav>
-    <a class="active" href="#home">Home</a><a href="#shop">Shop</a><a href="#phones">Phones</a>
-    <a href="#laptops">Laptops</a><a href="#gaming">Gaming</a><a href="#accessories">Accessories</a>
-    <a href="#about">About</a><a href="#contact">Contact</a>
+  <a class="brand" href="#home" aria-label="KINGS TECH home">
+    <img src="assets/header-logo.jpg" alt="KINGS TECH crown K logo" class="brand-logo">
+  </a>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <a class="active" href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#phones">Phones</a>
+    <a href="#laptops">Laptops</a>
+    <a href="#gaming">Gaming</a>
+    <a href="#accessories">Accessories</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
+
   <div class="header-actions">
-    <input id="search" type="search" placeholder="Search for products...">
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="Search for products..." aria-label="Search products">
+      <span>⌕</span>
+    </div>
     <button class="icon-btn" aria-label="Account">♙</button>
-    <button class="icon-btn cart-btn" aria-label="Cart">🛒<b id="cartCount">0</b></button>
+    <button class="icon-btn cart-btn" aria-label="Shopping cart">🛒<b id="cartCount">0</b></button>
   </div>
 </header>
 
 <main id="home">
-<section class="hero">
-  <div class="hero-crest">
-    <div class="crest-large"><img src="logo.svg" alt="KINGS TECH crown crest"></div>
-    <h2>KINGS TECH</h2><p>QUALITY • TRUST • GLOBAL</p>
-  </div>
-  <div class="hero-copy">
-    <div class="eyebrow">THE BEST TECH <span>FROM CHINA</span></div>
-    <div class="script-line">To Zimbabwe 🇿🇼</div>
-    <p>Phones • Laptops • Gaming • Cameras<br>Audio • Accessories • And More!</p>
-    <a class="gold-btn" href="#shop">SHOP NOW →</a>
-  </div>
-  <div class="hero-products">
-    <img src="https://images.unsplash.com/photo-1592286927505-2fd5c6f6f4c2?auto=format&fit=crop&w=700&q=85" alt="Smartphone">
-    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=85" alt="Laptop">
-    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=700&q=85" alt="Gaming setup">
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-brand-panel">
+      <img src="assets/hero-brand.jpg" alt="KINGS TECH royal K crown branding">
+    </div>
 
-<section class="trust">
-  <div>🛡️ <b>100% Original</b><small>Genuine Products</small></div>
-  <div>🚚 <b>Fast & Safe Shipping</b><small>China → Worldwide</small></div>
-  <div>🎧 <b>Customer Support</b><small>We're here to help</small></div>
-  <div>🔒 <b>Secure Payments</b><small>Safe & Trusted</small></div>
-  <div>☆ <b>Best Prices</b><small>More Value</small></div>
-</section>
+    <div class="hero-copy">
+      <div class="hero-title">THE BEST TECH<br>FROM CHINA</div>
+      <div class="hero-script">To Zimbabwe 🇿🇼</div>
+      <p>Phones <i>•</i> Laptops <i>•</i> Gaming <i>•</i> Cameras<br>
+         Audio <i>•</i> Accessories <i>•</i> And More!</p>
+      <a class="gold-btn" href="#shop">SHOP NOW <span>→</span></a>
+    </div>
 
-<section class="section" id="shop">
-  <div class="section-head"><h2>♛ SHOP BY <span>CATEGORY</span></h2><a href="#shop">View All Categories →</a></div>
-  <div class="categories">
-    <a class="cat" href="#phones" style="--bg:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=700&q=85')"><b>Phones</b><span>→</span></a>
-    <a class="cat" href="#laptops" style="--bg:url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=85')"><b>Laptops</b><span>→</span></a>
-    <a class="cat" href="#gaming" style="--bg:url('https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=700&q=85')"><b>Gaming</b><span>→</span></a>
-    <a class="cat" href="#cameras" style="--bg:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=85')"><b>Cameras</b><span>→</span></a>
-    <a class="cat" href="#audio" style="--bg:url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=85')"><b>Audio</b><span>→</span></a>
-    <a class="cat" href="#accessories" style="--bg:url('https://images.unsplash.com/photo-1609592424991-4a2e5f0f4f4a?auto=format&fit=crop&w=700&q=85')"><b>Accessories</b><span>→</span></a>
-    <a class="cat" href="#smart" style="--bg:url('https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=700&q=85')"><b>Smart Devices</b><span>→</span></a>
-    <a class="cat" href="#cars" style="--bg:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=85')"><b>Car Electronics</b><span>→</span></a>
-    <a class="cat" href="#monitors" style="--bg:url('https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=700&q=85')"><b>Monitors</b><span>→</span></a>
-    <a class="cat" href="#computer" style="--bg:url('https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=700&q=85')"><b>Computer Accessories</b><span>→</span></a>
-  </div>
-</section>
+    <div class="hero-product-panel">
+      <img src="assets/hero-products.jpg" alt="Phones, laptop, gaming, camera and audio products">
+    </div>
+  </section>
 
-<section class="section" id="featured">
-  <div class="section-head"><h2>♛ FEATURED <span>PRODUCTS</span></h2><a href="#featured">View All Products →</a></div>
-  <div class="products" id="productGrid"></div>
-</section>
+  <section class="trust-strip">
+    <div><span class="trust-icon">♢</span><strong>100% Original</strong><small>Genuine Products</small></div>
+    <div><span class="trust-icon">▣</span><strong>Fast &amp; Safe Shipping</strong><small>China → Zimbabwe</small></div>
+    <div><span class="trust-icon">♧</span><strong>Customer Support</strong><small>We're here to help</small></div>
+    <div><span class="trust-icon">♙</span><strong>Secure Payments</strong><small>Safe &amp; Trusted</small></div>
+    <div><span class="trust-icon">☆</span><strong>Best Prices</strong><small>More Value</small></div>
+  </section>
 
-<section class="shipping">
-  <div class="ship-left"><div class="plane">✈</div><h2>SHIPPING TO<br><span>ZIMBABWE, ZAMBIA & SOUTH AFRICA</span></h2><p>Safe • Reliable • Fast • <b>Worldwide</b></p></div>
-  <div class="ship-right"><h3>🚚 ESTIMATED SHIPPING PRICES</h3>
-    <ul><li>Phones & Tablets <b>$25 – $45</b></li><li>Laptops <b>$35 – $70</b></li><li>Gaming Consoles <b>$40 – $80</b></li><li>Cameras <b>$35 – $70</b></li><li>Accessories <b>$20 – $40</b></li></ul>
-  </div>
-</section>
+  <section class="section" id="shop">
+    <div class="section-head">
+      <h2><span class="crown-mini">♛</span> SHOP <em>BY CATEGORY</em></h2>
+      <a href="#shop">View All Categories →</a>
+    </div>
+    <div class="gold-underline"></div>
 
-<section class="cars section" id="cars">
-  <div class="section-head"><h2>♛ CAR <span>ELECTRONICS</span></h2><a href="#contact">Request Availability →</a></div>
-  <p class="muted">Android head units • stereos • dash cams • reversing cameras • GPS • speakers • amplifiers • subwoofers • chargers • phone holders • LED lighting • TPMS • battery monitors and more.</p>
-</section>
+    <div class="categories">
+      <a class="cat" id="phones" href="#featured"><img src="assets/cat-phones.jpg" alt="Phones"><b>Phones</b><span>→</span></a>
+      <a class="cat" id="laptops" href="#featured"><img src="assets/cat-laptops.jpg" alt="Laptops"><b>Laptops</b><span>→</span></a>
+      <a class="cat" id="gaming" href="#featured"><img src="assets/cat-gaming.jpg" alt="Gaming"><b>Gaming</b><span>→</span></a>
+      <a class="cat" id="cameras" href="#featured"><img src="assets/cat-cameras.jpg" alt="Cameras"><b>Cameras</b><span>→</span></a>
+      <a class="cat" id="audio" href="#featured"><img src="assets/cat-audio.jpg" alt="Audio"><b>Audio</b><span>→</span></a>
 
-<section class="support" id="contact">
-  <div><h2>Need help choosing?</h2><p>Ask KINGS TECH about products, shipping or an order request.</p></div>
-  <button class="gold-btn" id="openChat">💬 ASK KINGS TECH</button>
-</section>
+      <a class="cat" id="accessories" href="#featured"><img src="assets/cat-accessories.jpg" alt="Accessories"><b>Accessories</b><span>→</span></a>
+      <a class="cat" id="smart" href="#featured"><img src="assets/cat-smart.jpg" alt="Smart Devices"><b>Smart Devices</b><span>→</span></a>
+      <a class="cat" id="cars" href="#car-electronics"><img src="assets/cat-car.jpg" alt="Car Electronics"><b>Car Electronics</b><span>→</span></a>
+      <a class="cat" id="monitors" href="#featured"><img src="assets/cat-monitors.jpg" alt="Monitors"><b>Monitors</b><span>→</span></a>
+      <a class="cat" id="computer" href="#featured"><img src="assets/cat-computer.jpg" alt="Computer Accessories"><b>Computer Accessories</b><span>→</span></a>
+    </div>
+  </section>
+
+  <section class="section featured-section" id="featured">
+    <div class="section-head">
+      <h2><span class="crown-mini">♛</span> FEATURED <em>PRODUCTS</em></h2>
+      <a href="#featured">View All Products →</a>
+    </div>
+    <div class="gold-underline"></div>
+    <div class="products" id="productGrid"></div>
+  </section>
+
+  <section class="shipping">
+    <div class="shipping-image">
+      <img src="assets/shipping.jpg" alt="Shipping from China to Zimbabwe, Zambia and South Africa">
+    </div>
+    <div class="shipping-copy">
+      <h3>🚚 ESTIMATED SHIPPING PRICES</h3>
+      <ul>
+        <li><span>Phones &amp; Tablets</span><b>$25 – $45</b></li>
+        <li><span>Laptops</span><b>$35 – $70</b></li>
+        <li><span>Gaming Consoles</span><b>$40 – $80</b></li>
+        <li><span>Cameras</span><b>$35 – $70</b></li>
+        <li><span>Accessories</span><b>$20 – $40</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="car-section section" id="car-electronics">
+    <div class="section-head">
+      <h2><span class="crown-mini">♛</span> CAR <em>ELECTRONICS</em></h2>
+      <a href="#contact">Request Availability →</a>
+    </div>
+    <div class="gold-underline"></div>
+    <p class="muted">Android head units • stereos • dash cams • reversing cameras • GPS • speakers • amplifiers • subwoofers • chargers • phone holders • LED lighting • TPMS • battery monitors and more.</p>
+  </section>
+
+  <section class="contact-panel" id="contact">
+    <div>
+      <h2>Need help choosing?</h2>
+      <p>Ask KINGS TECH about products, shipping or an order request.</p>
+      <p class="contact-number">WhatsApp: <strong>+86 132 8113 5605</strong></p>
+    </div>
+    <div class="contact-actions">
+      <a class="gold-btn" href="https://wa.me/8613281135605" target="_blank" rel="noopener">WHATSAPP US</a>
+      <button class="gold-btn outline" id="openChat">💬 ASK KINGS TECH</button>
+    </div>
+  </section>
+
+  <section class="payments section">
+    <div class="section-head">
+      <h2><span class="crown-mini">♛</span> SECURE <em>PAYMENTS</em></h2>
+    </div>
+    <div class="payment-grid">
+      <div class="payment-card"><span>💬</span><div><b>WeChat Pay</b><small>Accepted payment method</small></div></div>
+      <div class="payment-card"><span>🏦</span><div><b>Bank Transfer</b><small>Secure bank payment</small></div></div>
+    </div>
+  </section>
 </main>
 
 <footer id="about">
-  <div class="footer-brand"><img class="footer-logo" src="logo.svg" alt="KINGS TECH logo"><div class="brand-name">KINGS <span>TECH</span></div><p>QUALITY • TRUST • GLOBAL</p></div>
-  <div><h4>KINGS TECH</h4><p>Your trusted partner for the latest tech. We bring the best electronics from China to customers worldwide.</p></div>
-  <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-  <div><h4>Follow Us</h4><p>Facebook • TikTok • WhatsApp • Instagram • YouTube</p></div>
-  <div class="footer-slogan">Tech<br> <em>Makes Life Better</em> ♛</div>
-  <div class="copyright">© 2026 KINGS TECH. All rights reserved. | China → Worldwide | Zimbabwe • Zambia • South Africa</div>
+  <div class="footer-brand">
+    <img src="assets/header-logo.jpg" alt="KINGS TECH" class="footer-logo">
+  </div>
+  <div>
+    <h4>KINGS TECH</h4>
+    <p>Your trusted partner for the latest tech. We bring the best electronics from China to Zimbabwe.</p>
+  </div>
+  <div>
+    <h4>Quick Links</h4>
+    <a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </div>
+  <div>
+    <h4>Follow Us</h4>
+    <p>Facebook • TikTok • WhatsApp • Instagram • YouTube</p>
+    <p class="footer-whatsapp">+86 132 8113 5605</p>
+  </div>
+  <div class="footer-slogan">Tech<br><em>Makes Life Better</em> ♛</div>
+  <div class="copyright">© 2026 KINGS TECH. All rights reserved. &nbsp; | &nbsp; China → Zimbabwe &nbsp; | &nbsp; Zambia &nbsp; | &nbsp; South Africa</div>
 </footer>
 
 <div class="chat" id="chat">
-  <div class="chat-head">♛ KINGS TECH <button id="closeChat">×</button></div>
-  <div class="chat-body" id="chatBody"><p><b>KINGS TECH Assistant:</b> Hello 👑 How can I help? Ask about products, shipping, or an order.</p></div>
-  <div class="quick"><button data-q="What products do you have?">Products</button><button data-q="How much is shipping?">Shipping</button><button data-q="I want to order">Order</button></div>
-  <form id="chatForm"><input id="chatInput" placeholder="Type your question..."><button>➤</button></form>
+  <div class="chat-head">♛ KINGS TECH <button id="closeChat" aria-label="Close">×</button></div>
+  <div class="chat-body" id="chatBody"><p><b>KINGS TECH Assistant:</b> Hello 👑 How can I help? Ask about products, shipping, payments or an order.</p></div>
+  <div class="quick">
+    <button data-q="What products do you have?">Products</button>
+    <button data-q="How much is shipping?">Shipping</button>
+    <button data-q="What payment methods do you accept?">Payments</button>
+    <button data-q="I want to order">Order</button>
+  </div>
+  <form id="chatForm"><input id="chatInput" placeholder="Type your question..." autocomplete="off"><button>➤</button></form>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
